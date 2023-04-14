@@ -14,6 +14,9 @@ class Book(models.Model):
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
     warehouse = models.ManyToManyField(Warehouse, through='Warehousebook')
 
+    def __str__(self) -> str:
+        return self.title
+
 
 class Warehousebook(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)

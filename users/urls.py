@@ -2,6 +2,7 @@ from django.urls import path, include
 from . import views
 
 
-url_patterns = [
-    path('customer/', views.get_user_list)
-]
+urlpatterns = [
+    path("customers/", views.get_customer_list),
+    path("author/<slug:slug>/", views.get_author_book)]
+
