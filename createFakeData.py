@@ -31,10 +31,10 @@ for k in range(10):
                     phone=fake.phone_number(),
                     url=fake.url(),)
     
-    warehouse=Recipe(Warehouse, 
-                    code=fake.unique.random_int(), 
-                    phone=fake.phone_number(),
-                    address=fake.address(),)
+    # warehouse=Recipe(Warehouse, 
+    #                 code=fake.unique.random_int(), 
+    #                 phone=fake.phone_number(),
+    #                 address=fake.address(),)
     
     book=Recipe(Book, 
                 isbn=fake.unique.isbn10(),
@@ -43,12 +43,13 @@ for k in range(10):
                 price=randint(1, 1000),
                 author=foreign_key(author),
                 publisher=foreign_key(publisher),
-                warehouse=foreign_key(warehouse)
+                # warehouse=foreign_key(warehouse)
                 )
     
     basket=Recipe(Basket,
                    customer=foreign_key(customer),
-                   book=foreign_key(book))
+                   book=foreign_key(book)
+                )
     book.make()
     basket.make()
     publisher.make()
