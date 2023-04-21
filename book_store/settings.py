@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'basket',
     'library',
     'users',
-    'warehouse'
+    'warehouse',
+    'wikipedia_app',
+    'geeksforgeeks',
 ]
 
 MIDDLEWARE = [

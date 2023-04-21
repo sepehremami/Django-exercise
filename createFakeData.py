@@ -58,8 +58,15 @@ for k in range(10):
                     book=foreign_key(book),
                     warehouse=foreign_key(warehouse),
                     count=fake.random_int(),)
-    book.make()
-    # basket.make()
+    basket=Recipe(Basket,
+        customer=foreign_key(customer),
+
+    )
+    # basket_middle=Recipe()
+
+    warehousebook.make()
+    
+    basket.make()
     warehouse.make()
     publisher.make()
     customer.make()
