@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reminder app</title>
+</head>
+<body>
+<div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="http://127.0.0.1:8000/stackoverflow/register/">Home</a></li>
+            <li><a href="http://127.0.0.1:8000/question/questions">questions</a></li>
+        </ul>
+        {% endblock %}
+</div>
+{% block content %}{% endblock %}
+<div>
+    {% for task in objects %}
+    <p>
+        {{ task.title }}
+    </p>
+    {% endfor %}
+</div>
+</body>
+</html>

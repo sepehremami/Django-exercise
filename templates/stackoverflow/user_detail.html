@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{% block content %}
+
+<div>
+    <h1>{{user.username}}</h1>
+    <h3>{{user.email}}</h3>
+    <h3>{{choghondat.slug}}</h3>
+</div>
+<div class="questions">
+   <ol>
+    {% for question in questions%}
+    <li><span>Question: </span>{{question.title}}</li>
+    {% endfor %}
+   <ol>
+</div>
+{% endblock %}

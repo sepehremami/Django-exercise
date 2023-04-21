@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
     path('geeks/', include('geeksforgeeks.urls')),
-    path('question/', include('questions.urls'))
+    path('question/', include('questions.urls')),
+    path('stackoverflow/', include('stackoverflow.urls')),
 
 ]

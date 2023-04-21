@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView
 from django.http import HttpRequest
 from .models import Questions, Response
 from stackoverflow.models import User
-# Create your views here.
+from django.views.generic import ListView
 
 
 def newquestion(request:HttpRequest):
@@ -31,6 +31,11 @@ def question(request, question_id):
     return render(request, 'questions/show_question.html', {"question": question, "responses": responses})
 
 
+class QuestionListView(ListView):
+    model = Questions
+    template_name= 'questions/questions_list.html'
+    context_object_name = 'questions'
+    paginate_by = 3
 
     
 
