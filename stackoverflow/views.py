@@ -6,6 +6,8 @@ from django.http import HttpResponse
 from .models import User
 from questions.models import Questions, Response
 from django.db.models import Count
+
+
 class NewUser(View):
     def get(self, request, *args, **kwargs):
         user = User.objects.all()
@@ -53,3 +55,4 @@ class UserWithMostRsponse(ListView):
         context['responses'] = response
         print(response.values())
         return context
+    
