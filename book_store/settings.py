@@ -41,8 +41,9 @@ INSTALLED_APPS = [
     'library',
     'users',
     'warehouse',
-    'wikipedia_app',
     'geeksforgeeks',
+    'questions',
+    'stackoverflow'
 ]
 
 MIDDLEWARE = [
